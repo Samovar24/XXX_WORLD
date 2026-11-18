@@ -52,7 +52,6 @@
 </head>
 <body class="min-h-screen antialiased">
 
-  <!-- 18+ -->
   <div id="ageGate" class="fixed inset-0 z-[100] flex items-center justify-center p-5 bg-ink/95 backdrop-blur-2xl">
     <div class="w-full max-w-md text-center">
       <div class="mx-auto mb-9 w-20 h-20 rounded-full flex items-center justify-center
@@ -72,7 +71,6 @@
 
   <div id="mainContent" class="hidden">
 
-    <!-- NAVBAR -->
     <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-ink/60 border-b border-white/[0.06]">
       <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2.5 group">
@@ -83,6 +81,7 @@
           <a href="index.html"    class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">Главная</a>
           <a href="about.html"    class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">О канале</a>
           <a href="rules.html"    class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">Правила</a>
+          <a href="faq.html"      class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">FAQ</a>
           <a href="contacts.html" class="text-white">Контакты</a>
         </div>
         <button id="menuBtn" class="md:hidden p-2 -mr-2 text-neutral-300 hover:text-amber-400 transition-colors" aria-label="Меню">
@@ -95,12 +94,12 @@
           <a href="index.html"    class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">Главная</a>
           <a href="about.html"    class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">О канале</a>
           <a href="rules.html"    class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">Правила</a>
+          <a href="faq.html"      class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">FAQ</a>
           <a href="contacts.html" class="py-3 px-3 rounded-lg hover:bg-white/5 text-white text-[15px]">Контакты</a>
         </div>
       </div>
     </header>
 
-    <!-- HERO -->
     <section class="relative pt-36 pb-16 sm:pt-44 sm:pb-20 overflow-hidden">
       <div class="absolute inset-0 pointer-events-none"
            style="background: radial-gradient(circle at 50% 20%, rgba(245,158,11,0.10), transparent 45%);"></div>
@@ -115,11 +114,9 @@
       </div>
     </section>
 
-    <!-- КАРТОЧКИ КОНТАКТОВ -->
     <section class="pb-24 sm:pb-32">
       <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-4">
 
-        <!-- Основной контакт: сам канал -->
         <a href="https://t.me/+3DDiesC8YYtjODJi" target="_blank" rel="noopener"
            class="card-soft block p-7 sm:p-9 rounded-2xl bg-gradient-to-b from-white/[0.045] to-white/[0.01] border border-white/[0.06]">
           <div class="flex items-start gap-5">
@@ -135,7 +132,6 @@
           </div>
         </a>
 
-        <!-- Администрация -->
         <div class="card-soft p-7 sm:p-9 rounded-2xl bg-gradient-to-b from-white/[0.045] to-white/[0.01] border border-white/[0.06]">
           <div class="flex items-start gap-5">
             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-600/5
@@ -156,7 +152,6 @@
           </div>
         </div>
 
-        <!-- Время ответа -->
         <div class="card-soft p-7 sm:p-9 rounded-2xl bg-gradient-to-b from-white/[0.045] to-white/[0.01] border border-white/[0.06]">
           <div class="flex items-start gap-5">
             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-600/5
@@ -168,13 +163,12 @@
             <div class="flex-1">
               <h2 class="text-[17px] font-semibold mb-1.5 tracking-tight">Время ответа</h2>
               <p class="text-neutral-400 text-[14px] leading-relaxed">
-                Обычно отвечаем в течение 24 часов. По срочным вопросам — пишите сразу в Telegram, не в почту.
+                Обычно отвечаем в течение 24 часов. По срочным вопросам — пишите сразу в Telegram.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- CTA -->
         <div class="pt-8 text-center">
           <a href="https://t.me/+3DDiesC8YYtjODJi" target="_blank" rel="noopener"
              class="btn-glow inline-flex items-center justify-center gap-3
@@ -187,7 +181,6 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="border-t border-white/[0.06] py-14">
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
@@ -199,6 +192,7 @@
             <a href="index.html"    class="hover:text-amber-400 transition-colors">Главная</a>
             <a href="about.html"    class="hover:text-amber-400 transition-colors">О канале</a>
             <a href="rules.html"    class="hover:text-amber-400 transition-colors">Правила</a>
+            <a href="faq.html"      class="hover:text-amber-400 transition-colors">FAQ</a>
             <a href="contacts.html" class="hover:text-amber-400 transition-colors">Контакты</a>
           </nav>
           <p class="text-xs text-neutral-600 text-center sm:text-right leading-relaxed">
@@ -240,4 +234,4 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-          </html>
+                </html>
