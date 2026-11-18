@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samovar24.github.io/XXX_WORLD/sitemap.xml
