@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Частые вопросы — XXX_WORLD</title>
+  <meta name="description" content="Ответы на частые вопросы о закрытом Telegram-канале XXX_WORLD: как вступить, что внутри, почему 18+." />
+
+  <!-- OG-теги -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://samovar24.github.io/XXX_WORLD/faq.html" />
+  <meta property="og:title" content="Частые вопросы — XXX_WORLD" />
+  <meta property="og:description" content="Ответы на частые вопросы о закрытом канале." />
+  <meta property="og:image" content="https://samovar24.github.io/XXX_WORLD/og-image.jpeg" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="XXX_WORLD" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fbbf24'/><stop offset='100%25' stop-color='%23ea580c'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='72' font-family='Inter,Arial,sans-serif' font-size='62' font-weight='800' text-anchor='middle' fill='%230a0a0a'>X</text></svg>" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          ink:   '#080808',
+          amber: { 300:'#fcd34d', 400:'#fbbf24', 500:'#f59e0b', 600:'#ea580c' }
+        },
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        letterSpacing: { 'tightest': '-0.045em' }
+      }}
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background: #080808;
+      color: #f5f5f5;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 45%, #ea580c 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .btn-glow {
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.25) inset,
+        0 0 0 1px rgba(251,191,36,0.25),
+        0 8px 24px -6px rgba(245,158,11,0.35),
+        0 24px 60px -20px rgba(234,88,12,0.35);
+      transition: box-shadow .35s ease, transform .2s ease;
+    }
+    .btn-glow:hover {
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.35) inset,
+        0 0 0 1px rgba(251,191,36,0.45),
+        0 12px 32px -6px rgba(245,158,11,0.5),
+        0 32px 80px -20px rgba(234,88,12,0.5);
+      transform: translateY(-1px);
+    }
+    .bg-glow::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(245,158,11,0.10) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    /* FAQ: красивый details/summary без JS */
+    details {
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      transition: border-color .3s ease;
+    }
+    details[open] { border-color: rgba(251,191,36,0.25); }
+    details summary {
+      cursor: pointer;
+      padding: 20px 22px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-weight: 600;
+      font-size: 15px;
+      color: #f5f5f5;
+      user-select: none;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after {
+      content: '+';
+      font-size: 22px;
+      font-weight: 300;
+      color: #fbbf24;
+      line-height: 1;
+      transition: transform .3s ease;
+      flex-shrink: 0;
+    }
+    details[open] summary::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    details[open] summary { padding-bottom: 12px; }
+    details .answer {
+      padding: 0 22px 22px;
+      color: #a3a3a3;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .rise { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+    .rise-1 { animation-delay: .05s; }
+    .rise-2 { animation-delay: .15s; }
+    .rise-3 { animation-delay: .25s; }
+  </style>
+</head>
+
+<body class="min-h-screen antialiased">
+
+  <!-- HEADER -->
+  <header class="relative z-10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-center sm:justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600
+                     flex items-center justify-center font-extrabold text-ink text-sm
+                     transition-transform duration-300 group-hover:scale-105">X</span>
+        <span class="font-bold tracking-tight text-[15px]">
+          XXX<span class="text-gradient">_WORLD</span>
+        </span>
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-[13px] text-neutral-500">
+        <a href="about.html"    class="hover:text-amber-400 transition-colors duration-300">О канале</a>
+        <a href="rules.html"    class="hover:text-amber-400 transition-colors duration-300">Правила</a>
+        <a href="contacts.html" class="hover:text-amber-400 transition-colors duration-300">Контакты</a>
+        <a href="faq.html"      class="text-white">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-glow relative pt-12 pb-14 sm:pt-16 sm:pb-16 overflow-hidden">
+    <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <p class="rise rise-1 text-[11px] font-medium text-amber-400/80 tracking-[0.18em] uppercase mb-5">FAQ</p>
+      <h1 class="rise rise-2 text-4xl sm:text-5xl font-extrabold tracking-tightest leading-[1.05] mb-5">
+        Частые <span class="text-gradient">вопросы</span>
+      </h1>
+      <p class="rise rise-3 text-neutral-400 text-[15px] leading-relaxed max-w-md mx-auto">
+        Коротко о главном. Если ответа нет — пишите в канал.
+      </p>
+    </div>
+  </section>
+
+  <!-- СПИСОК ВОПРОСОВ -->
+  <section class="pb-24 sm:pb-28">
+    <div class="max-w-2xl mx-auto px-5 sm:px-8 space-y-3">
+
+      <details>
+        <summary>Что такое XXX_WORLD?</summary>
+        <div class="answer">
+          Это закрытый Telegram-канал с отборным контентом. Доступ только для подписчиков, все материалы публикуются внутри канала.
+        </div>
+      </details>
+
+      <details>
+        <summary>Как вступить в канал?</summary>
+        <div class="answer">
+          Нажмите кнопку «Вступить в канал» на главной странице — она ведёт прямо в Telegram. Всё, что нужно — установленное приложение Telegram.
+        </div>
+      </details>
+
+      <details>
+        <summary>Это бесплатно?</summary>
+        <div class="answer">
+          Да, вступить в канал можно бесплатно. Все актуальные условия и возможные специальные предложения указаны внутри канала.
+        </div>
+      </details>
+
+      <details>
+        <summary>Почему 18+?</summary>
+        <div class="answer">
+          Канал содержит материалы для взрослой аудитории. Доступ разрешён только лицам, достигшим 18 лет. Нажимая «Мне есть 18 лет», вы подтверждаете своё совершеннолетие.
+        </div>
+      </details>
+
+      <details>
+        <summary>Какой контент публикуется?</summary>
+        <div class="answer">
+          Тематические подборки и материалы, которые не публикуются в открытом доступе. Обновления выходят регулярно.
+        </div>
+      </details>
+
+      <details>
+        <summary>Можно ли пересылать материалы?</summary>
+        <div class="answer">
+          Нет. Всё, что публикуется в канале, остаётся в канале. Пересылка и скриншоты — прямое нарушение правил и повод для блокировки.
+        </div>
+      </details>
+
+      <details>
+        <summary>Как связаться с администрацией?</summary>
+        <div class="answer">
+          Через Telegram — контакт модератора указан в закреплённом сообщении канала. Также можете посмотреть страницу <a href="contacts.html" class="text-amber-400 hover:underline">Контакты</a>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Что делать, если ссылка на канал не открывается?</summary>
+        <div class="answer">
+          Проверьте, установлен ли Telegram. Если да — обновите приложение и попробуйте снова. Если проблема сохраняется, напишите администрации через раздел <a href="contacts.html" class="text-amber-400 hover:underline">Контакты</a>.
+        </div>
+      </details>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center pt-14">
+      <a href="https://t.me/+3DDiesC8YYtjODJi" target="_blank" rel="noopener"
+         class="btn-glow inline-flex items-center justify-center gap-3
+                px-9 sm:px-12 py-4.5 sm:py-5 rounded-2xl font-semibold text-base sm:text-lg text-ink
+                bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.94 4.6c.2-1-.7-1.8-1.6-1.4L2.5 10.2c-1 .4-1 1.9 0 2.3l4.6 1.5 1.8 5.6c.3.9 1.4 1.1 2 .4l2.5-2.6 4.8 3.5c.8.6 2 .2 2.2-.8l3.5-15.5Zm-4.4 3.2-7.7 7-.3 3.3-1.3-4 9.3-6.3Z"/>
+        </svg>
+        Вступить в канал
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[0.06] py-8">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-5">
+      <p class="text-xs text-neutral-600 order-2 sm:order-1">
+        © <span id="year"></span> XXX_WORLD · 18+
+      </p>
+      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[13px] text-neutral-500 order-1 sm:order-2">
+        <a href="about.html"    class="hover:text-amber-400 transition-colors">О канале</a>
+        <a href="rules.html"    class="hover:text-amber-400 transition-colors">Правила</a>
+        <a href="contacts.html" class="hover:text-amber-400 transition-colors">Контакты</a>
+        <a href="faq.html"      class="hover:text-amber-400 transition-colors">FAQ</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- FAQPage schema для Google (богатые сниппеты) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Что такое XXX_WORLD?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Это закрытый Telegram-канал с отборным контентом. Доступ только для подписчиков." }
+      },
+      {
+        "@type": "Question",
+        "name": "Как вступить в канал?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нажмите кнопку «Вступить в канал» на главной странице — она ведёт прямо в Telegram." }
+      },
+      {
+        "@type": "Question",
+        "name": "Это бесплатно?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, вступить в канал можно бесплатно." }
+      },
+      {
+        "@type": "Question",
+        "name": "Почему 18+?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Канал содержит материалы для взрослой аудитории. Доступ разрешён только лицам от 18 лет." }
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли пересылать материалы?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Всё остаётся внутри канала. Пересылка и скриншоты запрещены." }
+      }
+    ]
+  }
+  </script>
+
+</body>
+          </html>
