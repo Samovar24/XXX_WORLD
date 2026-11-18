@@ -45,7 +45,6 @@
     }
   </script>
 
-  <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -67,7 +66,6 @@
       color: transparent;
     }
 
-    /* Мягкое премиальное свечение кнопки */
     .btn-glow {
       box-shadow:
         0 1px 0 rgba(255,255,255,0.25) inset,
@@ -86,7 +84,6 @@
     }
     .btn-glow:active { transform: translateY(0); }
 
-    /* Мягкое янтарное свечение на фоне */
     .bg-glow::before {
       content: '';
       position: absolute;
@@ -97,7 +94,73 @@
       pointer-events: none;
     }
 
-    /* Появление при загрузке */
+    /* ---------- ТИЗЕР-ГАЛЕРЕЯ ---------- */
+    .teaser-card {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: border-color .4s ease, transform .4s cubic-bezier(.2,.7,.2,1);
+      cursor: pointer;
+    }
+    .teaser-card:hover {
+      border-color: rgba(251,191,36,0.35);
+      transform: translateY(-3px);
+    }
+
+    .teaser-blur {
+      position: absolute;
+      inset: -20px;
+      filter: blur(28px) saturate(1.05);
+      transform: scale(1.08);
+      transition: filter .6s ease, transform .6s cubic-bezier(.2,.7,.2,1);
+    }
+    .teaser-card:hover .teaser-blur {
+      filter: blur(18px) saturate(1.2);
+      transform: scale(1.12);
+    }
+
+    .teaser-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(8,8,8,0.85) 0%, rgba(8,8,8,0.15) 45%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .teaser-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: #fbbf24;
+      background: rgba(8,8,8,0.7);
+      border: 1px solid rgba(251,191,36,0.3);
+      border-radius: 8px;
+      backdrop-filter: blur(8px);
+    }
+
+    .teaser-lock {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.02em;
+    }
+
     @keyframes rise {
       from { opacity: 0; transform: translateY(14px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -171,6 +234,7 @@
         <div class="hidden sm:flex items-center gap-6 text-[13px] text-neutral-500">
           <a href="about.html"    class="hover:text-amber-400 transition-colors duration-300">О канале</a>
           <a href="rules.html"    class="hover:text-amber-400 transition-colors duration-300">Правила</a>
+          <a href="faq.html"      class="hover:text-amber-400 transition-colors duration-300">FAQ</a>
           <a href="contacts.html" class="hover:text-amber-400 transition-colors duration-300">Контакты</a>
         </div>
       </div>
@@ -180,7 +244,6 @@
     <main class="bg-glow relative flex-1 flex items-center justify-center px-5 py-16 sm:py-24">
       <div class="relative w-full max-w-3xl text-center">
 
-        <!-- Бейдж -->
         <div class="rise rise-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full
                     border border-amber-500/25 bg-amber-500/[0.06] mb-10">
           <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
@@ -189,18 +252,15 @@
           </span>
         </div>
 
-        <!-- Заголовок -->
         <h1 class="rise rise-2 text-[56px] leading-[0.95] sm:text-8xl md:text-[112px]
                    font-extrabold tracking-tightest mb-6">
           XXX<span class="text-gradient">_WORLD</span>
         </h1>
 
-        <!-- Короткий текст -->
         <p class="rise rise-3 text-neutral-400 text-[15px] sm:text-lg leading-relaxed max-w-md mx-auto mb-12">
           Закрытый канал с отборным контентом
         </p>
 
-        <!-- Кнопка -->
         <div class="rise rise-4">
           <a href="https://t.me/+3DDiesC8YYtjODJi" target="_blank" rel="noopener"
              class="btn-glow inline-flex items-center justify-center gap-3
@@ -216,6 +276,195 @@
       </div>
     </main>
 
+    <!-- ---------- ТИЗЕР-ГАЛЕРЕЯ ---------- -->
+    <section class="relative border-t border-white/[0.06] py-16 sm:py-20">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+
+        <div class="text-center mb-10 sm:mb-12">
+          <p class="text-[11px] font-medium text-amber-400/80 tracking-[0.18em] uppercase mb-4">
+            Что внутри
+          </p>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
+            Приоткрыть <span class="text-gradient">завесу</span>
+          </h2>
+          <p class="text-neutral-500 text-[14px] sm:text-[15px] max-w-md mx-auto leading-relaxed">
+            Небольшой намек на то, что публикуется в канале.
+            Полные версии — только для подписчиков.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+
+          <!-- Карточка 1: Закат над водой -->
+          <div class="teaser-card">
+            <div class="teaser-blur">
+              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a1208"/>
+                    <stop offset="45%" stop-color="#f59e0b"/>
+                    <stop offset="70%" stop-color="#ea580c"/>
+                    <stop offset="100%" stop-color="#7c2d12"/>
+                  </linearGradient>
+                </defs>
+                <rect width="300" height="400" fill="url(#g1)"/>
+                <circle cx="150" cy="180" r="55" fill="#fde68a" opacity="0.9"/>
+                <rect y="250" width="300" height="150" fill="#0a0807" opacity="0.85"/>
+              </svg>
+            </div>
+            <div class="teaser-overlay"></div>
+            <span class="teaser-badge">18+</span>
+            <div class="teaser-lock">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              Только в канале
+            </div>
+          </div>
+
+          <!-- Карточка 2: Силуэт -->
+          <div class="teaser-card">
+            <div class="teaser-blur">
+              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+                <defs>
+                  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#0a0807"/>
+                    <stop offset="55%" stop-color="#7c2d12"/>
+                    <stop offset="100%" stop-color="#fbbf24"/>
+                  </linearGradient>
+                </defs>
+                <rect width="300" height="400" fill="url(#g2)"/>
+                <ellipse cx="150" cy="380" rx="140" ry="180" fill="#0a0807" opacity="0.9"/>
+              </svg>
+            </div>
+            <div class="teaser-overlay"></div>
+            <span class="teaser-badge">18+</span>
+            <div class="teaser-lock">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              Только в канале
+            </div>
+          </div>
+
+          <!-- Карточка 3: Абстракция -->
+          <div class="teaser-card">
+            <div class="teaser-blur">
+              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+                <defs>
+                  <radialGradient id="g3" cx="50%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#fcd34d"/>
+                    <stop offset="50%" stop-color="#ea580c"/>
+                    <stop offset="100%" stop-color="#0a0807"/>
+                  </radialGradient>
+                </defs>
+                <rect width="300" height="400" fill="url(#g3)"/>
+                <circle cx="200" cy="280" r="90" fill="#0a0807" opacity="0.7"/>
+                <circle cx="90" cy="120" r="60" fill="#fef3c7" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="teaser-overlay"></div>
+            <span class="teaser-badge">18+</span>
+            <div class="teaser-lock">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              Только в канале
+            </div>
+          </div>
+
+          <!-- Карточка 4: Горизонт -->
+          <div class="teaser-card">
+            <div class="teaser-blur">
+              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+                <defs>
+                  <linearGradient id="g4" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stop-color="#0a0807"/>
+                    <stop offset="40%" stop-color="#ea580c"/>
+                    <stop offset="70%" stop-color="#fbbf24"/>
+                    <stop offset="100%" stop-color="#fef3c7"/>
+                  </linearGradient>
+                </defs>
+                <rect width="300" height="400" fill="url(#g4)"/>
+                <rect y="260" width="300" height="140" fill="#0a0807" opacity="0.95"/>
+              </svg>
+            </div>
+            <div class="teaser-overlay"></div>
+            <span class="teaser-badge">18+</span>
+            <div class="teaser-lock">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              Только в канале
+            </div>
+          </div>
+
+          <!-- Карточка 5: Силуэт на закате -->
+          <div class="teaser-card">
+            <div class="teaser-blur">
+              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+                <defs>
+                  <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#fbbf24"/>
+                    <stop offset="50%" stop-color="#ea580c"/>
+                    <stop offset="100%" stop-color="#1a1208"/>
+                  </linearGradient>
+                </defs>
+                <rect width="300" height="400" fill="url(#g5)"/>
+                <path d="M 0 300 Q 150 200 300 320 L 300 400 L 0 400 Z" fill="#0a0807" opacity="0.85"/>
+                <circle cx="150" cy="140" r="40" fill="#fef3c7" opacity="0.7"/>
+              </svg>
+            </div>
+            <div class="teaser-overlay"></div>
+            <span class="teaser-badge">18+</span>
+            <div class="teaser-lock">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              Только в канале
+            </div>
+          </div>
+
+          <!-- Карточка 6: Туман -->
+          <div class="teaser-card">
+            <div class="teaser-blur">
+              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+                <defs>
+                  <radialGradient id="g6" cx="70%" cy="70%" r="80%">
+                    <stop offset="0%" stop-color="#fde68a"/>
+                    <stop offset="35%" stop-color="#f59e0b"/>
+                    <stop offset="70%" stop-color="#7c2d12"/>
+                    <stop offset="100%" stop-color="#0a0807"/>
+                  </radialGradient>
+                </defs>
+                <rect width="300" height="400" fill="url(#g6)"/>
+                <ellipse cx="80" cy="100" rx="70" ry="40" fill="#0a0807" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="teaser-overlay"></div>
+            <span class="teaser-badge">18+</span>
+            <div class="teaser-lock">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              Только в канале
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-10">
+          <p class="text-neutral-500 text-[13px]">
+            Полные материалы публикуются в канале.
+            <a href="https://t.me/+3DDiesC8YYtjODJi" target="_blank" rel="noopener" class="text-amber-400 hover:underline font-medium">
+              Вступить →
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ---------- FOOTER ---------- -->
     <footer class="relative z-10 border-t border-white/[0.06]">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-5">
@@ -227,6 +476,7 @@
         <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[13px] text-neutral-500 order-1 sm:order-2">
           <a href="about.html"    class="hover:text-amber-400 transition-colors duration-300">О канале</a>
           <a href="rules.html"    class="hover:text-amber-400 transition-colors duration-300">Правила</a>
+          <a href="faq.html"      class="hover:text-amber-400 transition-colors duration-300">FAQ</a>
           <a href="contacts.html" class="hover:text-amber-400 transition-colors duration-300">Контакты</a>
         </nav>
 
@@ -239,7 +489,6 @@
        JS
        ========================================================= -->
   <script>
-    // --- 1. Возрастная проверка ---
     const ageGate     = document.getElementById('ageGate');
     const mainContent = document.getElementById('mainContent');
     const btnAgeYes   = document.getElementById('btnAgeYes');
@@ -260,9 +509,8 @@
       window.location.href = 'https://www.google.com';
     });
 
-    // --- 2. Год в футере ---
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
-  </html>
+                  </html>
