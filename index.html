@@ -6,7 +6,6 @@
   <title>XXX_WORLD — Закрытый канал</title>
   <meta name="description" content="Закрытый Telegram-канал с отборным контентом. Только 18+." />
 
-  <!-- OG-теги для превью в Telegram и соцсетях -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://samovar24.github.io/XXX_WORLD/" />
   <meta property="og:title" content="XXX_WORLD — Закрытый канал" />
@@ -22,10 +21,8 @@
   <meta name="twitter:description" content="Закрытый канал с отборным контентом. Только 18+." />
   <meta name="twitter:image" content="https://samovar24.github.io/XXX_WORLD/og-image.jpeg" />
 
-  <!-- Favicon (SVG прямо в коде) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fbbf24'/><stop offset='100%25' stop-color='%23ea580c'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='72' font-family='Inter,Arial,sans-serif' font-size='62' font-weight='800' text-anchor='middle' fill='%230a0a0a'>X</text></svg>" />
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -94,73 +91,6 @@
       pointer-events: none;
     }
 
-    /* ---------- ТИЗЕР-ГАЛЕРЕЯ ---------- */
-    .teaser-card {
-      position: relative;
-      aspect-ratio: 3 / 4;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: border-color .4s ease, transform .4s cubic-bezier(.2,.7,.2,1);
-      cursor: pointer;
-    }
-    .teaser-card:hover {
-      border-color: rgba(251,191,36,0.35);
-      transform: translateY(-3px);
-    }
-
-    .teaser-blur {
-      position: absolute;
-      inset: -20px;
-      filter: blur(20px) saturate(1.1);
-      transform: scale(1.08);
-      transition: filter .6s ease, transform .6s cubic-bezier(.2,.7,.2,1);
-    }
-    .teaser-card:hover .teaser-blur {
-      filter: blur(12px) saturate(1.25);
-      transform: scale(1.12);
-    }
-
-    .teaser-overlay {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to top, rgba(8,8,8,0.9) 0%, rgba(8,8,8,0.15) 45%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .teaser-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 8px;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      color: #fbbf24;
-      background: rgba(8,8,8,0.7);
-      border: 1px solid rgba(251,191,36,0.3);
-      border-radius: 8px;
-      backdrop-filter: blur(8px);
-    }
-
-    .teaser-lock {
-      position: absolute;
-      bottom: 14px;
-      left: 14px;
-      right: 14px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.75);
-      letter-spacing: 0.02em;
-    }
-
     @keyframes rise {
       from { opacity: 0; transform: translateY(14px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -175,9 +105,6 @@
 
 <body class="min-h-screen antialiased">
 
-  <!-- =========================================================
-       18+ ВОЗРАСТНАЯ ПРОВЕРКА
-       ========================================================= -->
   <div id="ageGate"
        class="fixed inset-0 z-[100] flex items-center justify-center p-5 bg-ink/95 backdrop-blur-2xl">
     <div class="w-full max-w-md text-center">
@@ -213,12 +140,8 @@
     </div>
   </div>
 
-  <!-- =========================================================
-       ОСНОВНОЙ КОНТЕНТ
-       ========================================================= -->
   <div id="mainContent" class="hidden min-h-screen flex flex-col">
 
-    <!-- ---------- HEADER ---------- -->
     <header class="relative z-10">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-center sm:justify-between">
 
@@ -240,7 +163,6 @@
       </div>
     </header>
 
-    <!-- ---------- ЦЕНТРАЛЬНЫЙ БЛОК ---------- -->
     <main class="bg-glow relative flex-1 flex items-center justify-center px-5 py-16 sm:py-24">
       <div class="relative w-full max-w-3xl text-center">
 
@@ -276,198 +198,6 @@
       </div>
     </main>
 
-    <!-- ---------- ТИЗЕР-ГАЛЕРЕЯ ---------- -->
-    <section class="relative border-t border-white/[0.06] py-16 sm:py-20">
-      <div class="max-w-5xl mx-auto px-5 sm:px-8">
-
-        <div class="text-center mb-10 sm:mb-12">
-          <p class="text-[11px] font-medium text-amber-400/80 tracking-[0.18em] uppercase mb-4">
-            Что внутри
-          </p>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
-            Приоткрыть <span class="text-gradient">завесу</span>
-          </h2>
-          <p class="text-neutral-500 text-[14px] sm:text-[15px] max-w-md mx-auto leading-relaxed">
-            Небольшой намек на то, что публикуется в канале.
-            Полные версии — только для подписчиков.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-
-          <!-- Карточка 1: розовый → красный, стоящий силуэт -->
-          <div class="teaser-card">
-            <div class="teaser-blur">
-              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
-                <defs>
-                  <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#fce7f3"/>
-                    <stop offset="35%" stop-color="#ec4899"/>
-                    <stop offset="70%" stop-color="#be123c"/>
-                    <stop offset="100%" stop-color="#1a0810"/>
-                  </linearGradient>
-                </defs>
-                <rect width="300" height="400" fill="url(#g1)"/>
-                <circle cx="150" cy="140" r="26" fill="#1a0810" opacity="0.9"/>
-                <path d="M150 168 Q180 178 180 240 L176 400 L124 400 L120 240 Q120 178 150 168 Z" fill="#1a0810" opacity="0.9"/>
-                <circle cx="150" cy="140" r="70" fill="#fef3c7" opacity="0.15"/>
-              </svg>
-            </div>
-            <div class="teaser-overlay"></div>
-            <span class="teaser-badge">18+</span>
-            <div class="teaser-lock">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-              Только в канале
-            </div>
-          </div>
-
-          <!-- Карточка 2: розовый → фиолетовый, нежный профиль -->
-          <div class="teaser-card">
-            <div class="teaser-blur">
-              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
-                <defs>
-                  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#fbcfe8"/>
-                    <stop offset="45%" stop-color="#c084fc"/>
-                    <stop offset="100%" stop-color="#4c1d95"/>
-                  </linearGradient>
-                </defs>
-                <rect width="300" height="400" fill="url(#g2)"/>
-                <path d="M120 130 Q170 110 195 165 Q215 195 200 225 Q190 250 195 280 L175 305 Q150 320 130 305 Q110 285 108 255 Q105 220 108 185 Q110 155 120 130 Z" fill="#2d1b3e" opacity="0.85"/>
-                <ellipse cx="140" cy="215" rx="4" ry="2.5" fill="#fef3c7" opacity="0.9"/>
-                <path d="M128 250 Q145 258 162 252" stroke="#fef3c7" stroke-width="1.5" fill="none" opacity="0.5"/>
-                <circle cx="80" cy="80" r="60" fill="#fde68a" opacity="0.2"/>
-              </svg>
-            </div>
-            <div class="teaser-overlay"></div>
-            <span class="teaser-badge">18+</span>
-            <div class="teaser-lock">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-              Только в канале
-            </div>
-          </div>
-
-          <!-- Карточка 3: тёплый беж, лежащий силуэт (переработано) -->
-          <div class="teaser-card">
-            <div class="teaser-blur">
-              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
-                <defs>
-                  <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#fde68a"/>
-                    <stop offset="40%" stop-color="#fdba74"/>
-                    <stop offset="75%" stop-color="#c2410c"/>
-                    <stop offset="100%" stop-color="#1a0810"/>
-                  </linearGradient>
-                </defs>
-                <rect width="300" height="400" fill="url(#g3)"/>
-
-                <!-- Мягкое свечение как простыни/постель -->
-                <ellipse cx="170" cy="270" rx="130" ry="60" fill="#fef3c7" opacity="0.12"/>
-
-                <g fill="#1a0810" opacity="0.9">
-                  <!-- Голова -->
-                  <circle cx="60" cy="235" r="25"/>
-
-                  <!-- Волосы, рассыпанные назад -->
-                  <path d="M 42 240 Q 20 258 25 285 Q 45 305 78 295 Q 68 275 58 258 Q 50 248 42 240 Z"/>
-
-                  <!-- Шея -->
-                  <path d="M 78 230 Q 92 226 105 235 Q 108 248 98 258 Q 86 260 76 255 Z"/>
-
-                  <!-- Плечо и спина, изящный изгиб талии -->
-                  <path d="M 95 232
-                           Q 125 215 155 225
-                           Q 185 235 200 255
-                           Q 215 275 210 295
-                           Q 195 315 165 318
-                           Q 140 318 122 305
-                           Q 110 285 105 265
-                           Q 100 245 95 238 Z"/>
-
-                  <!-- Бедро, тянущееся вправо -->
-                  <path d="M 195 260
-                           Q 235 245 265 258
-                           Q 285 270 290 285
-                           Q 278 300 250 300
-                           Q 220 298 195 288 Z"/>
-
-                  <!-- Нога чуть ниже -->
-                  <path d="M 210 285
-                           Q 240 280 265 288
-                           Q 278 298 270 308
-                           Q 245 312 218 305 Z"
-                        opacity="0.7"/>
-                </g>
-
-                <!-- Рука закинута за голову -->
-                <path d="M 68 225 Q 88 205 105 210 Q 112 220 105 228"
-                      stroke="#1a0810" stroke-width="10" fill="none"
-                      stroke-linecap="round" opacity="0.9"/>
-
-                <!-- Тонкая изящная линия контура -->
-                <path d="M 100 240 Q 130 220 165 235"
-                      stroke="#fef3c7" stroke-width="1.2" fill="none"
-                      opacity="0.18"/>
-              </svg>
-            </div>
-            <div class="teaser-overlay"></div>
-            <span class="teaser-badge">18+</span>
-            <div class="teaser-lock">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-              Только в канале
-            </div>
-          </div>
-
-          <!-- Карточка 4: багровый → пурпурный, два силуэта -->
-          <div class="teaser-card">
-            <div class="teaser-blur">
-              <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
-                <defs>
-                  <radialGradient id="g4" cx="50%" cy="50%" r="75%">
-                    <stop offset="0%" stop-color="#fb7185"/>
-                    <stop offset="45%" stop-color="#7c2d12"/>
-                    <stop offset="100%" stop-color="#0a0807"/>
-                  </radialGradient>
-                </defs>
-                <rect width="300" height="400" fill="url(#g4)"/>
-                <circle cx="115" cy="170" r="22" fill="#0a0807" opacity="0.9"/>
-                <path d="M115 192 Q140 200 140 250 L136 400 L94 400 Q88 250 115 192 Z" fill="#0a0807" opacity="0.9"/>
-                <circle cx="185" cy="170" r="22" fill="#0a0807" opacity="0.9"/>
-                <path d="M185 192 Q160 200 160 250 L164 400 L206 400 Q212 250 185 192 Z" fill="#0a0807" opacity="0.9"/>
-                <circle cx="150" cy="150" r="50" fill="#fde68a" opacity="0.15"/>
-              </svg>
-            </div>
-            <div class="teaser-overlay"></div>
-            <span class="teaser-badge">18+</span>
-            <div class="teaser-lock">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-              Только в канале
-            </div>
-          </div>
-
-        </div>
-
-        <div class="text-center mt-10">
-          <p class="text-neutral-500 text-[13px]">
-            Полные материалы публикуются в канале.
-            <a href="https://t.me/+3DDiesC8YYtjODJi" target="_blank" rel="noopener" class="text-amber-400 hover:underline font-medium">
-              Вступить →
-            </a>
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ---------- FOOTER ---------- -->
     <footer class="relative z-10 border-t border-white/[0.06]">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-5">
 
@@ -487,9 +217,6 @@
 
   </div>
 
-  <!-- =========================================================
-       JS
-       ========================================================= -->
   <script>
     const ageGate     = document.getElementById('ageGate');
     const mainContent = document.getElementById('mainContent');
@@ -515,4 +242,4 @@
   </script>
 
 </body>
-                  </html>
+</html>
