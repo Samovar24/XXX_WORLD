@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Правила — XXX_WORLD</title>
-  <meta name="description" content="Правила поведения в канале XXX_WORLD: уважение, приватность, дисциплина." />
+  <meta name="description" content="Правила канала XXX_WORLD: только 18+, контент не распространяется." />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fbbf24'/><stop offset='100%25' stop-color='%23ea580c'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='72' font-family='Inter,Arial,sans-serif' font-size='62' font-weight='800' text-anchor='middle' fill='%230a0a0a'>X</text></svg>" />
 
@@ -12,7 +12,7 @@
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { ink:'#080808', smoke:'#0f0f0f', amber:{300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#ea580c'} },
+        colors: { ink:'#080808', amber:{300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#ea580c'} },
         fontFamily: { sans:['Inter','system-ui','sans-serif'] },
         letterSpacing: { 'tightest':'-0.04em' }
       }}
@@ -27,7 +27,6 @@
     body { background:#080808; color:#f5f5f5; font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
     .text-gradient { background: linear-gradient(135deg,#fcd34d 0%,#f59e0b 45%,#ea580c 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
     .btn-glow {
-      position: relative;
       box-shadow:
         0 1px 0 rgba(255,255,255,0.25) inset,
         0 0 0 1px rgba(251,191,36,0.25),
@@ -67,12 +66,11 @@
         <span class="text-2xl font-extrabold text-gradient tracking-tight">18+</span>
       </div>
       <h1 class="text-2xl sm:text-3xl font-bold mb-3 tracking-tight">Только для <span class="text-gradient">совершеннолетних</span></h1>
-      <p class="text-neutral-400 text-sm mb-9 leading-relaxed">Здесь взрослые разговоры и взрослые материалы. Подтверди возраст — и проходи внутрь.</p>
+      <p class="text-neutral-400 text-sm mb-9 leading-relaxed">Подтвердите свой возраст, чтобы продолжить.</p>
       <div class="flex flex-col gap-3">
         <button id="btnAgeYes" class="btn-glow w-full py-4 rounded-xl font-semibold text-ink bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-[15px]">Мне есть 18 лет — войти</button>
         <button id="btnAgeNo" class="w-full py-4 rounded-xl font-medium text-neutral-400 border border-white/10 hover:border-white/25 hover:text-white transition-all duration-300 text-[15px]">Мне нет 18 лет</button>
       </div>
-      <p class="mt-9 text-xs text-neutral-600 leading-relaxed">Продолжая, вы подтверждаете совершеннолетие<br class="hidden sm:block"> и согласие с правилами.</p>
     </div>
   </div>
 
@@ -113,69 +111,35 @@
       <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
         <p class="rise rise-1 text-[11px] font-medium text-amber-400/80 tracking-[0.18em] uppercase mb-5">Правила</p>
         <h1 class="rise rise-2 text-4xl sm:text-6xl font-extrabold tracking-tightest leading-[1.05] mb-6">
-          Уважение — <span class="text-gradient">это фундамент</span>
+          Два <span class="text-gradient">пункта</span>
         </h1>
-        <p class="rise rise-3 text-neutral-400 text-[15px] sm:text-lg leading-relaxed max-w-xl mx-auto">
-          Несколько простых правил. Они держат атмосферу — и именно за неё здесь остаются.
+        <p class="rise rise-3 text-neutral-400 text-[15px] sm:text-lg leading-relaxed max-w-md mx-auto">
+          Минимум условий. Всё остальное не про этот канал.
         </p>
       </div>
     </section>
 
     <section class="pb-24 sm:pb-32">
-      <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-3.5">
+      <div class="max-w-2xl mx-auto px-5 sm:px-8 space-y-3.5">
 
         <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] flex gap-5">
           <span class="rule-num">01</span>
           <div>
-            <h2 class="text-[17px] font-semibold mb-2 tracking-tight">Только 18+</h2>
-            <p class="text-neutral-400 text-[14px] leading-relaxed">Если вам нет 18 лет — покиньте канал. Это не рекомендация, а требование.</p>
+            <h2 class="text-[17px] font-semibold mb-2 tracking-tight">18+</h2>
+            <p class="text-neutral-400 text-[14px] leading-relaxed">
+              Канал содержит материалы для взрослых. Доступ разрешён только лицам, достигшим 18 лет. Если вам нет 18 — покиньте канал.
+            </p>
           </div>
         </div>
 
         <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] flex gap-5">
           <span class="rule-num">02</span>
           <div>
-            <h2 class="text-[17px] font-semibold mb-2 tracking-tight">Уважение к участникам</h2>
-            <p class="text-neutral-400 text-[14px] leading-relaxed">Никакого хамства, оскорблений, травли. Споры — спокойно, по существу.</p>
+            <h2 class="text-[17px] font-semibold mb-2 tracking-tight">Не распространять контент</h2>
+            <p class="text-neutral-400 text-[14px] leading-relaxed">
+              Материалы канала предназначены только для личного просмотра подписчиками. Пересылка, публикация, скриншоты и любое распространение запрещены.
+            </p>
           </div>
-        </div>
-
-        <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] flex gap-5">
-          <span class="rule-num">03</span>
-          <div>
-            <h2 class="text-[17px] font-semibold mb-2 tracking-tight">Не выносить наружу</h2>
-            <p class="text-neutral-400 text-[14px] leading-relaxed">Всё, что публикуется в канале, остаётся в канале. Скриншоты и пересылка — запрещены.</p>
-          </div>
-        </div>
-
-        <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] flex gap-5">
-          <span class="rule-num">04</span>
-          <div>
-            <h2 class="text-[17px] font-semibold mb-2 tracking-tight">Без рекламы и спама</h2>
-            <p class="text-neutral-400 text-[14px] leading-relaxed">Сторонние ссылки, самопиар и продажи — только с разрешения администрации.</p>
-          </div>
-        </div>
-
-        <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] flex gap-5">
-          <span class="rule-num">05</span>
-          <div>
-            <h2 class="text-[17px] font-semibold mb-2 tracking-tight">Приватность — святое</h2>
-            <p class="text-neutral-400 text-[14px] leading-relaxed">Не публикуйте чужие личные данные. И свои — тоже, если не уверены на 100%.</p>
-          </div>
-        </div>
-
-        <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] flex gap-5">
-          <span class="rule-num">06</span>
-          <div>
-            <h2 class="text-[17px] font-semibold mb-2 tracking-tight">Решение администрации</h2>
-            <p class="text-neutral-400 text-[14px] leading-relaxed">Модератор всегда прав. Спорные ситуации — в личку, а не в общий чат.</p>
-          </div>
-        </div>
-
-        <div class="mt-10 p-6 sm:p-7 rounded-2xl bg-amber-500/[0.06] border border-amber-500/20">
-          <p class="text-amber-200/90 text-[14px] leading-relaxed">
-            <span class="font-semibold text-amber-300">Нарушение правил</span> — предупреждение или бан без объяснений. Мы заботимся об атмосфере, а не о количестве участников.
-          </p>
         </div>
 
         <div class="text-center pt-10">
