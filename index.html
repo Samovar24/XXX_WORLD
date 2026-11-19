@@ -91,51 +91,6 @@
       pointer-events: none;
     }
 
-    /* Кнопки навигации в шапке (десктоп) */
-    .nav-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 14px;
-      font-size: 12.5px;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      color: #d4d4d4;
-      background: rgba(255,255,255,0.025);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 999px;
-      transition: color .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease, transform .2s ease;
-    }
-    .nav-pill:hover {
-      color: #fcd34d;
-      border-color: rgba(251,191,36,0.4);
-      background: rgba(251,191,36,0.06);
-      box-shadow: 0 0 0 1px rgba(251,191,36,0.08), 0 6px 20px -8px rgba(245,158,11,0.5);
-      transform: translateY(-1px);
-    }
-
-    /* Пункты мобильного меню */
-    .nav-mobile-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 16px;
-      margin-bottom: 8px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #d4d4d4;
-      background: rgba(255,255,255,0.025);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 14px;
-      transition: color .3s ease, border-color .3s ease, background .3s ease;
-    }
-    .nav-mobile-item:active,
-    .nav-mobile-item:hover {
-      color: #fcd34d;
-      border-color: rgba(251,191,36,0.35);
-      background: rgba(251,191,36,0.05);
-    }
-    .nav-mobile-item:last-child { margin-bottom: 0; }
-
     @keyframes rise {
       from { opacity: 0; transform: translateY(14px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -200,14 +155,14 @@
           </span>
         </a>
 
-        <!-- Десктоп-меню: кнопки-пилюли -->
-        <nav class="hidden md:flex items-center gap-1.5">
-          <a href="about.html"    class="nav-pill">О канале</a>
-          <a href="rules.html"    class="nav-pill">Правила</a>
-          <a href="faq.html"      class="nav-pill">FAQ</a>
-          <a href="partners.html" class="nav-pill">Партнёры</a>
-          <a href="contacts.html" class="nav-pill">Контакты</a>
-        </nav>
+        <!-- Десктоп-меню: кнопки-пилюли на чистом Tailwind -->
+        <div class="hidden md:flex items-center gap-2">
+          <a href="about.html"    class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">О канале</a>
+          <a href="rules.html"    class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Правила</a>
+          <a href="faq.html"      class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">FAQ</a>
+          <a href="partners.html" class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Партнёры</a>
+          <a href="contacts.html" class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Контакты</a>
+        </div>
 
         <!-- Бургер (мобилка) -->
         <button id="menuBtn" class="md:hidden p-2 -mr-2 text-neutral-300 hover:text-amber-400 transition-colors" aria-label="Меню">
@@ -220,28 +175,23 @@
         </button>
       </div>
 
-      <!-- Мобильное меню: пункты-кнопки -->
+      <!-- Мобильное меню: карточки-кнопки -->
       <div id="mobileMenu" class="hidden md:hidden border-t border-white/[0.06] bg-ink/95 backdrop-blur-xl">
         <div class="px-4 py-4">
-          <a href="about.html" class="nav-mobile-item">
-            О канале
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <a href="about.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">
+            О канале <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </a>
-          <a href="rules.html" class="nav-mobile-item">
-            Правила
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <a href="rules.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">
+            Правила <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </a>
-          <a href="faq.html" class="nav-mobile-item">
-            FAQ
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <a href="faq.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">
+            FAQ <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </a>
-          <a href="partners.html" class="nav-mobile-item">
-            Партнёры
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <a href="partners.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">
+            Партнёры <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </a>
-          <a href="contacts.html" class="nav-mobile-item">
-            Контакты
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <a href="contacts.html" class="flex items-center justify-between p-3.5 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">
+            Контакты <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
@@ -339,4 +289,4 @@
   </script>
 
 </body>
-          </html>
+</html>
