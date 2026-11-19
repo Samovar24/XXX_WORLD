@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Партнёры — XXX_WORLD</title>
+  <meta name="description" content="Проверенные каналы и проекты, которые мы рекомендуем. Размещение рекламы." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fbbf24'/><stop offset='100%25' stop-color='%23ea580c'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='72' font-family='Inter,Arial,sans-serif' font-size='62' font-weight='800' text-anchor='middle' fill='%230a0a0a'>X</text></svg>" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink:'#080808', amber:{300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#ea580c'} },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'] },
+        letterSpacing: { 'tightest':'-0.04em' }
+      }}
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#080808; color:#f5f5f5; font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+    .text-gradient { background: linear-gradient(135deg,#fcd34d 0%,#f59e0b 45%,#ea580c 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .btn-glow {
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.25) inset,
+        0 0 0 1px rgba(251,191,36,0.25),
+        0 8px 24px -6px rgba(245,158,11,0.35),
+        0 24px 60px -20px rgba(234,88,12,0.35);
+      transition: box-shadow .35s ease, transform .2s ease;
+    }
+    .btn-glow:hover {
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.35) inset,
+        0 0 0 1px rgba(251,191,36,0.45),
+        0 12px 32px -6px rgba(245,158,11,0.5),
+        0 32px 80px -20px rgba(234,88,12,0.5);
+      transform: translateY(-1px);
+    }
+    .card-soft { transition: border-color .3s ease, transform .3s ease, background .3s ease; }
+    .card-soft:hover { border-color: rgba(251,191,36,0.28); transform: translateY(-2px); }
+    @keyframes rise { from{opacity:0;transform:translateY(14px);} to{opacity:1;transform:translateY(0);} }
+    .rise { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+    .rise-1{animation-delay:.05s;} .rise-2{animation-delay:.15s;} .rise-3{animation-delay:.25s;}
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+
+  <!-- 18+ -->
+  <div id="ageGate" class="fixed inset-0 z-[100] flex items-center justify-center p-5 bg-ink/95 backdrop-blur-2xl">
+    <div class="w-full max-w-md text-center">
+      <div class="mx-auto mb-9 w-20 h-20 rounded-full flex items-center justify-center
+                  border border-amber-500/40 bg-gradient-to-br from-amber-500/20 to-amber-600/5
+                  shadow-[0_0_40px_-10px_rgba(245,158,11,0.6)]">
+        <span class="text-2xl font-extrabold text-gradient tracking-tight">18+</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-bold mb-3 tracking-tight">Только для <span class="text-gradient">совершеннолетних</span></h1>
+      <p class="text-neutral-400 text-sm mb-9 leading-relaxed">Подтвердите свой возраст, чтобы продолжить.</p>
+      <div class="flex flex-col gap-3">
+        <button id="btnAgeYes" class="btn-glow w-full py-4 rounded-xl font-semibold text-ink bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-[15px]">Мне есть 18 лет — войти</button>
+        <button id="btnAgeNo" class="w-full py-4 rounded-xl font-medium text-neutral-400 border border-white/10 hover:border-white/25 hover:text-white transition-all duration-300 text-[15px]">Мне нет 18 лет</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mainContent" class="hidden">
+
+    <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-ink/60 border-b border-white/[0.06]">
+      <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-ink text-sm transition-transform duration-300 group-hover:scale-105">X</span>
+          <span class="font-bold tracking-tight text-[15px]">XXX<span class="text-gradient">_WORLD</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="index.html"    class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">Главная</a>
+          <a href="about.html"    class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">О канале</a>
+          <a href="rules.html"    class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">Правила</a>
+          <a href="faq.html"      class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">FAQ</a>
+          <a href="partners.html" class="text-white">Партнёры</a>
+          <a href="contacts.html" class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">Контакты</a>
+        </div>
+        <button id="menuBtn" class="md:hidden p-2 -mr-2 text-neutral-300 hover:text-amber-400 transition-colors" aria-label="Меню">
+          <svg id="menuIconOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="menuIconClose" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="hidden md:hidden border-t border-white/[0.06] bg-ink/95 backdrop-blur-xl">
+        <div class="px-4 py-3 flex flex-col">
+          <a href="index.html"    class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">Главная</a>
+          <a href="about.html"    class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">О канале</a>
+          <a href="rules.html"    class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">Правила</a>
+          <a href="faq.html"      class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">FAQ</a>
+          <a href="partners.html" class="py-3 px-3 rounded-lg hover:bg-white/5 text-white text-[15px]">Партнёры</a>
+          <a href="contacts.html" class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">Контакты</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="relative pt-36 pb-16 sm:pt-44 sm:pb-20 overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none"
+           style="background: radial-gradient(circle at 50% 20%, rgba(245,158,11,0.10), transparent 45%);"></div>
+      <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
+        <p class="rise rise-1 text-[11px] font-medium text-amber-400/80 tracking-[0.18em] uppercase mb-5">Партнёры</p>
+        <h1 class="rise rise-2 text-4xl sm:text-6xl font-extrabold tracking-tightest leading-[1.05] mb-6">
+          Проверенные <span class="text-gradient">проекты</span>
+        </h1>
+        <p class="rise rise-3 text-neutral-400 text-[15px] sm:text-lg leading-relaxed max-w-xl mx-auto">
+          Каналы и сайты, которые мы лично знаем и рекомендуем.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-24 sm:pb-32">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8 space-y-4">
+
+        <!-- КАРТОЧКА ПАРТНЁРА 1 -->
+        <a href="https://t.me/" target="_blank" rel="noopener"
+           class="card-soft block p-7 sm:p-9 rounded-2xl bg-gradient-to-b from-white/[0.045] to-white/[0.01] border border-white/[0.06]">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-600/5
+                        border border-amber-500/20 flex items-center justify-center shrink-0
+                        font-bold text-amber-400 text-xl">
+              A
+            </div>
+            <div class="flex-1 min-w-0">
+              <h2 class="text-[17px] font-semibold mb-1.5 tracking-tight truncate">Название канала</h2>
+              <p class="text-neutral-400 text-[14px] leading-relaxed">Короткое описание канала или сайта — в одну строку.</p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-neutral-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- КАРТОЧКА ПАРТНЁРА 2 -->
+        <a href="https://t.me/" target="_blank" rel="noopener"
+           class="card-soft block p-7 sm:p-9 rounded-2xl bg-gradient-to-b from-white/[0.045] to-white/[0.01] border border-white/[0.06]">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500/20 to-rose-600/5
+                        border border-pink-500/20 flex items-center justify-center shrink-0
+                        font-bold text-pink-400 text-xl">
+              B
+            </div>
+            <div class="flex-1 min-w-0">
+              <h2 class="text-[17px] font-semibold mb-1.5 tracking-tight truncate">Второй проект</h2>
+              <p class="text-neutral-400 text-[14px] leading-relaxed">Ещё одно описание в одну строку.</p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-neutral-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- БЛОК ДЛЯ РЕКЛАМОДАТЕЛЕЙ -->
+        <div class="mt-12 p-8 sm:p-10 rounded-2xl bg-amber-500/[0.04] border border-amber-500/20 text-center">
+          <h3 class="text-xl font-bold text-white mb-3">Хотите разместиться здесь?</h3>
+          <p class="text-neutral-400 text-[14px] leading-relaxed max-w-md mx-auto mb-6">
+            Мы открыты к сотрудничеству. Если у вас есть качественный канал или проект, который будет интересен нашей аудитории — напишите нам.
+          </p>
+          <a href="contacts.html"
+             class="inline-flex items-center justify-center gap-2
+                    px-6 py-3.5 rounded-xl font-semibold text-[14px] text-ink
+                    bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600
+                    hover:shadow-[0_0_30px_-5px_rgba(245,158,11,0.5)] transition-all duration-300">
+            Оставить заявку
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="border-t border-white/[0.06] py-14">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
+          <a href="index.html" class="flex items-center gap-2.5 group">
+            <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-ink text-xs transition-transform duration-300 group-hover:scale-105">X</span>
+            <span class="font-semibold text-sm">XXX<span class="text-gradient">_WORLD</span></span>
+          </a>
+          <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[13px] text-neutral-500">
+            <a href="index.html"    class="hover:text-amber-400 transition-colors">Главная</a>
+            <a href="about.html"    class="hover:text-amber-400 transition-colors">О канале</a>
+            <a href="rules.html"    class="hover:text-amber-400 transition-colors">Правила</a>
+            <a href="faq.html"      class="hover:text-amber-400 transition-colors">FAQ</a>
+            <a href="partners.html" class="hover:text-amber-400 transition-colors">Партнёры</a>
+            <a href="contacts.html" class="hover:text-amber-400 transition-colors">Контакты</a>
+          </nav>
+          <p class="text-xs text-neutral-600 text-center sm:text-right leading-relaxed">
+            © <span id="year"></span> XXX_WORLD<br>
+            <span class="text-neutral-700">18+ · Только для взрослых</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const ageGate = document.getElementById('ageGate');
+    const mainContent = document.getElementById('mainContent');
+    const btnAgeYes = document.getElementById('btnAgeYes');
+    const btnAgeNo = document.getElementById('btnAgeNo');
+    if (localStorage.getItem('ageVerified') === 'yes') {
+      ageGate.classList.add('hidden');
+      mainContent.classList.remove('hidden');
+    }
+    btnAgeYes.addEventListener('click', () => {
+      localStorage.setItem('ageVerified', 'yes');
+      ageGate.classList.add('hidden');
+      mainContent.classList.remove('hidden');
+    });
+    btnAgeNo.addEventListener('click', () => { window.location.href = 'https://www.google.com'; });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const iconOpen = document.getElementById('menuIconOpen');
+    const iconClose = document.getElementById('menuIconClose');
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden', !isHidden);
+      iconClose.classList.toggle('hidden', isHidden);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+  </html>
