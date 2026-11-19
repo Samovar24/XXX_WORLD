@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Правила — XXX_WORLD</title>
   <meta name="description" content="Правила канала XXX_WORLD: только 18+, контент не распространяется." />
-
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fbbf24'/><stop offset='100%25' stop-color='%23ea580c'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='72' font-family='Inter,Arial,sans-serif' font-size='62' font-weight='800' text-anchor='middle' fill='%230a0a0a'>X</text></svg>" />
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -21,48 +19,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <style>
     html { scroll-behavior: smooth; }
     body { background:#080808; color:#f5f5f5; font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
     .text-gradient { background: linear-gradient(135deg,#fcd34d 0%,#f59e0b 45%,#ea580c 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
-    .btn-glow {
-      box-shadow:
-        0 1px 0 rgba(255,255,255,0.25) inset,
-        0 0 0 1px rgba(251,191,36,0.25),
-        0 8px 24px -6px rgba(245,158,11,0.35),
-        0 24px 60px -20px rgba(234,88,12,0.35);
-      transition: box-shadow .35s ease, transform .2s ease;
-    }
-    .btn-glow:hover {
-      box-shadow:
-        0 1px 0 rgba(255,255,255,0.35) inset,
-        0 0 0 1px rgba(251,191,36,0.45),
-        0 12px 32px -6px rgba(245,158,11,0.5),
-        0 32px 80px -20px rgba(234,88,12,0.5);
-      transform: translateY(-1px);
-    }
-    .rule-num {
-      width: 40px; height: 40px; flex-shrink: 0;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 14px;
-      color: #fbbf24;
-      background: linear-gradient(135deg, rgba(251,191,36,0.18), rgba(234,88,12,0.06));
-      border: 1px solid rgba(251,191,36,0.2);
-    }
+    .btn-glow { box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 0 0 1px rgba(251,191,36,0.25), 0 8px 24px -6px rgba(245,158,11,0.35), 0 24px 60px -20px rgba(234,88,12,0.35); transition: box-shadow .35s ease, transform .2s ease; }
+    .btn-glow:hover { box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 0 0 1px rgba(251,191,36,0.45), 0 12px 32px -6px rgba(245,158,11,0.5), 0 32px 80px -20px rgba(234,88,12,0.5); transform: translateY(-1px); }
+    .rule-num { width: 40px; height: 40px; flex-shrink: 0; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: #fbbf24; background: linear-gradient(135deg, rgba(251,191,36,0.18), rgba(234,88,12,0.06)); border: 1px solid rgba(251,191,36,0.2); }
     @keyframes rise { from{opacity:0;transform:translateY(14px);} to{opacity:1;transform:translateY(0);} }
     .rise { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
     .rise-1{animation-delay:.05s;} .rise-2{animation-delay:.15s;} .rise-3{animation-delay:.25s;}
   </style>
 </head>
 <body class="min-h-screen antialiased">
-
   <div id="ageGate" class="fixed inset-0 z-[100] flex items-center justify-center p-5 bg-ink/95 backdrop-blur-2xl">
     <div class="w-full max-w-md text-center">
-      <div class="mx-auto mb-9 w-20 h-20 rounded-full flex items-center justify-center
-                  border border-amber-500/40 bg-gradient-to-br from-amber-500/20 to-amber-600/5
-                  shadow-[0_0_40px_-10px_rgba(245,158,11,0.6)]">
+      <div class="mx-auto mb-9 w-20 h-20 rounded-full flex items-center justify-center border border-amber-500/40 bg-gradient-to-br from-amber-500/20 to-amber-600/5 shadow-[0_0_40px_-10px_rgba(245,158,11,0.6)]">
         <span class="text-2xl font-extrabold text-gradient tracking-tight">18+</span>
       </div>
       <h1 class="text-2xl sm:text-3xl font-bold mb-3 tracking-tight">Только для <span class="text-gradient">совершеннолетних</span></h1>
@@ -73,9 +45,7 @@
       </div>
     </div>
   </div>
-
   <div id="mainContent" class="hidden">
-
     <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-ink/60 border-b border-white/[0.06]">
       <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2.5 group">
@@ -87,6 +57,7 @@
           <a href="about.html"    class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">О канале</a>
           <a href="rules.html"    class="text-white">Правила</a>
           <a href="faq.html"      class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">FAQ</a>
+          <a href="partners.html" class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">Партнёры</a>
           <a href="contacts.html" class="text-neutral-400 hover:text-amber-400 transition-colors duration-300">Контакты</a>
         </div>
         <button id="menuBtn" class="md:hidden p-2 -mr-2 text-neutral-300 hover:text-amber-400 transition-colors" aria-label="Меню">
@@ -100,60 +71,43 @@
           <a href="about.html"    class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">О канале</a>
           <a href="rules.html"    class="py-3 px-3 rounded-lg hover:bg-white/5 text-white text-[15px]">Правила</a>
           <a href="faq.html"      class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">FAQ</a>
+          <a href="partners.html" class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">Партнёры</a>
           <a href="contacts.html" class="py-3 px-3 rounded-lg hover:bg-white/5 text-neutral-300 text-[15px]">Контакты</a>
         </div>
       </div>
     </header>
-
     <section class="relative pt-36 pb-16 sm:pt-44 sm:pb-20 overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none"
-           style="background: radial-gradient(circle at 85% 20%, rgba(234,88,12,0.10), transparent 45%);"></div>
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 85% 20%, rgba(234,88,12,0.10), transparent 45%);"></div>
       <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center">
         <p class="rise rise-1 text-[11px] font-medium text-amber-400/80 tracking-[0.18em] uppercase mb-5">Правила</p>
-        <h1 class="rise rise-2 text-4xl sm:text-6xl font-extrabold tracking-tightest leading-[1.05] mb-6">
-          Два <span class="text-gradient">пункта</span>
-        </h1>
-        <p class="rise rise-3 text-neutral-400 text-[15px] sm:text-lg leading-relaxed max-w-md mx-auto">
-          Минимум условий. Всё остальное не про этот канал.
-        </p>
+        <h1 class="rise rise-2 text-4xl sm:text-6xl font-extrabold tracking-tightest leading-[1.05] mb-6">Два <span class="text-gradient">пункта</span></h1>
+        <p class="rise rise-3 text-neutral-400 text-[15px] sm:text-lg leading-relaxed max-w-md mx-auto">Минимум условий. Всё остальное не про этот канал.</p>
       </div>
     </section>
-
     <section class="pb-24 sm:pb-32">
       <div class="max-w-2xl mx-auto px-5 sm:px-8 space-y-3.5">
-
         <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] flex gap-5">
           <span class="rule-num">01</span>
           <div>
             <h2 class="text-[17px] font-semibold mb-2 tracking-tight">18+</h2>
-            <p class="text-neutral-400 text-[14px] leading-relaxed">
-              Канал содержит материалы для взрослых. Доступ разрешён только лицам, достигшим 18 лет. Если вам нет 18 — покиньте канал.
-            </p>
+            <p class="text-neutral-400 text-[14px] leading-relaxed">Канал содержит материалы для взрослых. Доступ разрешён только лицам, достигшим 18 лет. Если вам нет 18 — покиньте канал.</p>
           </div>
         </div>
-
         <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] flex gap-5">
           <span class="rule-num">02</span>
           <div>
             <h2 class="text-[17px] font-semibold mb-2 tracking-tight">Не распространять контент</h2>
-            <p class="text-neutral-400 text-[14px] leading-relaxed">
-              Материалы канала предназначены только для личного просмотра подписчиками. Пересылка, публикация, скриншоты и любое распространение запрещены.
-            </p>
+            <p class="text-neutral-400 text-[14px] leading-relaxed">Материалы канала предназначены только для личного просмотра подписчиками. Пересылка, публикация, скриншоты и любое распространение запрещены.</p>
           </div>
         </div>
-
         <div class="text-center pt-10">
-          <a href="https://t.me/+3DDiesC8YYtjODJi" target="_blank" rel="noopener"
-             class="btn-glow inline-flex items-center justify-center gap-3
-                    px-9 sm:px-12 py-4.5 sm:py-5 rounded-2xl font-semibold text-base sm:text-lg text-ink
-                    bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
+          <a href="https://t.me/+3DDiesC8YYtjODJi" target="_blank" rel="noopener" class="btn-glow inline-flex items-center justify-center gap-3 px-9 sm:px-12 py-4.5 sm:py-5 rounded-2xl font-semibold text-base sm:text-lg text-ink bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.6c.2-1-.7-1.8-1.6-1.4L2.5 10.2c-1 .4-1 1.9 0 2.3l4.6 1.5 1.8 5.6c.3.9 1.4 1.1 2 .4l2.5-2.6 4.8 3.5c.8.6 2 .2 2.2-.8l3.5-15.5Zm-4.4 3.2-7.7 7-.3 3.3-1.3-4 9.3-6.3Z"/></svg>
             Вступить в канал
           </a>
         </div>
       </div>
     </section>
-
     <footer class="border-t border-white/[0.06] py-14">
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
@@ -166,18 +120,14 @@
             <a href="about.html"    class="hover:text-amber-400 transition-colors">О канале</a>
             <a href="rules.html"    class="hover:text-amber-400 transition-colors">Правила</a>
             <a href="faq.html"      class="hover:text-amber-400 transition-colors">FAQ</a>
+            <a href="partners.html" class="hover:text-amber-400 transition-colors">Партнёры</a>
             <a href="contacts.html" class="hover:text-amber-400 transition-colors">Контакты</a>
           </nav>
-          <p class="text-xs text-neutral-600 text-center sm:text-right leading-relaxed">
-            © <span id="year"></span> XXX_WORLD<br>
-            <span class="text-neutral-700">18+ · Только для взрослых</span>
-          </p>
+          <p class="text-xs text-neutral-600 text-center sm:text-right leading-relaxed">© <span id="year"></span> XXX_WORLD<br><span class="text-neutral-700">18+ · Только для взрослых</span></p>
         </div>
       </div>
     </footer>
-
   </div>
-
   <script>
     const ageGate = document.getElementById('ageGate');
     const mainContent = document.getElementById('mainContent');
@@ -193,7 +143,6 @@
       mainContent.classList.remove('hidden');
     });
     btnAgeNo.addEventListener('click', () => { window.location.href = 'https://www.google.com'; });
-
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const iconOpen = document.getElementById('menuIconOpen');
@@ -203,8 +152,7 @@
       iconOpen.classList.toggle('hidden', !isHidden);
       iconClose.classList.toggle('hidden', isHidden);
     });
-
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-              </html>
+  </html>
