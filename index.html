@@ -14,51 +14,52 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:site_name" content="XXX_WORLD" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="XXX_WORLD — Закрытый канал" />
-  <meta name="twitter:description" content="Закрытый канал с отборным контентом. Только 18+." />
-  <meta name="twitter:image" content="https://samovar24.github.io/XXX_WORLD/og-image.jpeg" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fbbf24'/><stop offset='100%25' stop-color='%23ea580c'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='72' font-family='Inter,Arial,sans-serif' font-size='62' font-weight='800' text-anchor='middle' fill='%230a0a0a'>X</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23080808'/><text x='50' y='72' font-family='Inter,Arial,sans-serif' font-size='62' font-weight='800' text-anchor='middle' fill='%23ffffff'>X</text></svg>" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { ink:'#080808', amber:{300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#ea580c'} }, fontFamily: { sans:['Inter','system-ui','sans-serif'] }, letterSpacing: { 'tightest':'-0.045em' } } } }
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          ink:   '#080808',
+          silver: { 300:'#d1d5db', 400:'#9ca3af', 500:'#6b7280', 600:'#4b5563' }
+        },
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        letterSpacing: { 'tightest': '-0.045em' }
+      }}
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
-    body { background:#080808; color:#f5f5f5; font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-    .text-gradient { background: linear-gradient(135deg,#fcd34d 0%,#f59e0b 45%,#ea580c 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
-    .btn-glow { box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 0 0 1px rgba(251,191,36,0.25), 0 8px 24px -6px rgba(245,158,11,0.35), 0 24px 60px -20px rgba(234,88,12,0.35); transition: box-shadow .35s ease, transform .2s ease; }
-    .btn-glow:hover { box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 0 0 1px rgba(251,191,36,0.45), 0 12px 32px -6px rgba(245,158,11,0.5), 0 32px 80px -20px rgba(234,88,12,0.5); transform: translateY(-1px); }
+    body { background: #080808; color: #f5f5f5; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    .text-gradient { background: linear-gradient(135deg, #ffffff 0%, #d1d5db 30%, #6b7280 70%, #374151 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .btn-glow { box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 0 0 1px rgba(209,213,219,0.3), 0 8px 24px -6px rgba(156,163,175,0.25), 0 24px 60px -20px rgba(107,114,128,0.35); transition: box-shadow .35s ease, transform .2s ease; }
+    .btn-glow:hover { box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 0 0 1px rgba(209,213,219,0.5), 0 12px 32px -6px rgba(156,163,175,0.4), 0 32px 80px -20px rgba(107,114,128,0.5); transform: translateY(-1px); }
     .btn-glow:active { transform: translateY(0); }
-    .bg-glow::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 30%, rgba(245,158,11,0.14) 0%, transparent 55%), radial-gradient(circle at 50% 100%, rgba(234,88,12,0.08) 0%, transparent 60%); pointer-events: none; }
+    .bg-glow::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 30%, rgba(209,213,219,0.08) 0%, transparent 55%), radial-gradient(circle at 50% 100%, rgba(107,114,128,0.08) 0%, transparent 60%); pointer-events: none; }
     .card-soft { transition: border-color .3s ease, transform .3s ease; }
-    .card-soft:hover { border-color: rgba(251,191,36,0.28); transform: translateY(-2px); }
+    .card-soft:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-2px); }
     @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
     .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
     .rise-1 { animation-delay: .05s; } .rise-2 { animation-delay: .15s; } .rise-3 { animation-delay: .28s; } .rise-4 { animation-delay: .40s; }
   </style>
-
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114392658', 'ym');
       ym(114392658, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/114392658" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
 </head>
 <body class="min-h-screen antialiased">
   <div id="ageGate" class="fixed inset-0 z-[100] flex items-center justify-center p-5 bg-ink/95 backdrop-blur-2xl">
     <div class="w-full max-w-md text-center">
-      <div class="mx-auto mb-9 w-20 h-20 rounded-full flex items-center justify-center border border-amber-500/40 bg-gradient-to-br from-amber-500/20 to-amber-600/5 shadow-[0_0_40px_-10px_rgba(245,158,11,0.6)]">
-        <span class="text-2xl font-extrabold text-gradient tracking-tight">18+</span>
-      </div>
+      <img src="sticker.png" alt="18+" class="w-28 h-28 mx-auto mb-6 object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]" />
       <h1 class="text-2xl sm:text-3xl font-bold mb-3 tracking-tight">Только для <span class="text-gradient">совершеннолетних</span></h1>
       <p class="text-neutral-400 text-sm mb-9 leading-relaxed">Подтвердите свой возраст, чтобы продолжить.</p>
       <div class="flex flex-col gap-3">
-        <button id="btnAgeYes" class="btn-glow w-full py-4 rounded-xl font-semibold text-ink bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-[15px]">Мне есть 18 лет — войти</button>
+        <button id="btnAgeYes" class="btn-glow w-full py-4 rounded-xl font-semibold text-ink bg-gradient-to-r from-white via-silver-300 to-silver-500 text-[15px]">Мне есть 18 лет — войти</button>
         <button id="btnAgeNo" class="w-full py-4 rounded-xl font-medium text-neutral-400 border border-white/10 hover:border-white/25 hover:text-white transition-all duration-300 text-[15px]">Мне нет 18 лет</button>
       </div>
     </div>
@@ -66,42 +67,44 @@
   <div id="mainContent" class="hidden min-h-screen flex flex-col">
     <header class="relative z-10">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
-        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
-          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-extrabold text-ink text-sm transition-transform duration-300 group-hover:scale-105">X</span>
+        <a href="index.html" class="flex items-center gap-3 group shrink-0">
+          <div class="h-8 w-12 flex items-center justify-center">
+            <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-white"><path d="M10 10 L20 30 M20 10 L10 30" stroke="currentColor" stroke-width="4"/><path d="M40 10 L50 30 M50 10 L40 30" stroke="currentColor" stroke-width="4"/><path d="M70 10 L80 30 M80 10 L70 30" stroke="currentColor" stroke-width="4"/></svg>
+          </div>
           <span class="font-bold tracking-tight text-[15px]">XXX<span class="text-gradient">_WORLD</span></span>
         </a>
         <div class="hidden md:flex items-center gap-2">
-          <a href="about.html"    class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">О канале</a>
-          <a href="rules.html"    class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Правила</a>
-          <a href="faq.html"      class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">FAQ</a>
-          <a href="partners.html" class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Партнёры</a>
-          <a href="contacts.html" class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Контакты</a>
+          <a href="about.html"    class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">О канале</a>
+          <a href="rules.html"    class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">Правила</a>
+          <a href="faq.html"      class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">FAQ</a>
+          <a href="partners.html" class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">Партнёры</a>
+          <a href="contacts.html" class="px-3.5 py-1.5 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/[0.08] rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">Контакты</a>
         </div>
-        <button id="menuBtn" class="md:hidden p-2 -mr-2 text-neutral-300 hover:text-amber-400 transition-colors" aria-label="Меню">
+        <button id="menuBtn" class="md:hidden p-2 -mr-2 text-neutral-300 hover:text-white transition-colors" aria-label="Меню">
           <svg id="menuIconOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
           <svg id="menuIconClose" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
       <div id="mobileMenu" class="hidden md:hidden border-t border-white/[0.06] bg-ink/95 backdrop-blur-xl">
         <div class="px-4 py-4">
-          <a href="about.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">О канале <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
-          <a href="rules.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">Правила <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
-          <a href="faq.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">FAQ <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
-          <a href="partners.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">Партнёры <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
-          <a href="contacts.html" class="flex items-center justify-between p-3.5 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all">Контакты <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+          <a href="about.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-white hover:border-white/30 hover:bg-white/10 transition-all">О канале <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+          <a href="rules.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-white hover:border-white/30 hover:bg-white/10 transition-all">Правила <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+          <a href="faq.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-white hover:border-white/30 hover:bg-white/10 transition-all">FAQ <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+          <a href="partners.html" class="flex items-center justify-between p-3.5 mb-2 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-white hover:border-white/30 hover:bg-white/10 transition-all">Партнёры <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+          <a href="contacts.html" class="flex items-center justify-between p-3.5 text-[15px] font-medium text-neutral-300 bg-white/[0.03] border border-white/10 rounded-xl hover:text-white hover:border-white/30 hover:bg-white/10 transition-all">Контакты <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     </header>
     <main class="bg-glow relative flex-1 flex items-center justify-center px-5 pt-16 pb-12 sm:pt-24 sm:pb-16">
       <div class="relative w-full max-w-3xl text-center">
-        <div class="rise rise-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/25 bg-amber-500/[0.06] mb-10">
-          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-          <span class="text-[11px] font-medium text-amber-300 tracking-[0.16em] uppercase">18+ · Закрытый канал</span>
+        <div class="rise rise-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/[0.06] mb-10">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+          <span class="text-[11px] font-medium text-silver-300 tracking-[0.16em] uppercase">18+ · Закрытый канал</span>
         </div>
-        <h1 class="rise rise-2 text-[56px] leading-[0.95] sm:text-8xl md:text-[112px] font-extrabold tracking-tightest mb-6">XXX<span class="text-gradient">_WORLD</span></h1>
+        <h1 class="rise rise-2 text-[56px] leading-[0.95] sm:text-8xl md:text-[112px] font-extrabold tracking-tightest mb-6 text-white">XXX<span class="text-gradient">_WORLD</span></h1>
         <p class="rise rise-3 text-neutral-400 text-[15px] sm:text-lg leading-relaxed max-w-md mx-auto mb-12">Закрытый канал с отборным контентом</p>
         <div class="rise rise-4">
-          <a href="https://t.me/xxx_world_s" target="_blank" rel="noopener" class="btn-glow inline-flex items-center justify-center gap-3 px-10 sm:px-14 py-4.5 sm:py-5 rounded-2xl font-semibold text-base sm:text-lg text-ink bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600">
+          <a href="https://t.me/xxx_world_s" target="_blank" rel="noopener" class="btn-glow inline-flex items-center justify-center gap-3 px-10 sm:px-14 py-4.5 sm:py-5 rounded-2xl font-semibold text-base sm:text-lg text-ink bg-gradient-to-r from-white via-silver-300 to-silver-500">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="currentColor"><path d="M21.94 4.6c.2-1-.7-1.8-1.6-1.4L2.5 10.2c-1 .4-1 1.9 0 2.3l4.6 1.5 1.8 5.6c.3.9 1.4 1.1 2 .4l2.5-2.6 4.8 3.5c.8.6 2 .2 2.2-.8l3.5-15.5Zm-4.4 3.2-7.7 7-.3 3.3-1.3-4 9.3-6.3Z"/></svg>
             Вступить в канал
           </a>
@@ -115,38 +118,32 @@
           <p class="text-neutral-500 text-[14px]">Проверенные проекты, которые мы рекомендуем.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-          <a href="https://t.me/" target="_blank" rel="noopener" class="card-soft block p-6 rounded-2xl bg-gradient-to-b from-white/[0.045] to-white/[0.01] border border-white/[0.06]">
+          <a href="https://t.me/" target="_blank" rel="noopener" class="card-soft block p-6 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06]">
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400/20 to-amber-600/5 border border-amber-500/20 flex items-center justify-center shrink-0 font-bold text-amber-400 text-lg">A</div>
-              <div class="flex-1 min-w-0">
-                <h3 class="text-[15px] font-semibold mb-1 truncate text-white">Название канала</h3>
-                <p class="text-neutral-400 text-[13px] truncate">Короткое описание</p>
-              </div>
+              <div class="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center shrink-0 font-bold text-white text-lg">A</div>
+              <div class="flex-1 min-w-0"><h3 class="text-[15px] font-semibold mb-1 truncate text-white">Название канала</h3><p class="text-neutral-400 text-[13px] truncate">Короткое описание</p></div>
             </div>
           </a>
-          <a href="https://t.me/" target="_blank" rel="noopener" class="card-soft block p-6 rounded-2xl bg-gradient-to-b from-white/[0.045] to-white/[0.01] border border-white/[0.06]">
+          <a href="https://t.me/" target="_blank" rel="noopener" class="card-soft block p-6 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06]">
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500/20 to-rose-600/5 border border-pink-500/20 flex items-center justify-center shrink-0 font-bold text-pink-400 text-lg">B</div>
-              <div class="flex-1 min-w-0">
-                <h3 class="text-[15px] font-semibold mb-1 truncate text-white">Второй проект</h3>
-                <p class="text-neutral-400 text-[13px] truncate">Ещё одно описание</p>
-              </div>
+              <div class="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center shrink-0 font-bold text-white text-lg">B</div>
+              <div class="flex-1 min-w-0"><h3 class="text-[15px] font-semibold mb-1 truncate text-white">Второй проект</h3><p class="text-neutral-400 text-[13px] truncate">Ещё одно описание</p></div>
             </div>
           </a>
         </div>
         <div class="text-center">
-          <a href="partners.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium text-[14px] text-amber-400 border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/10 hover:border-amber-500/50 transition-all">Смотреть всех партнёров <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+          <a href="partners.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium text-[14px] text-white border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 transition-all">Смотреть всех партнёров <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     </section>
     <footer class="relative z-10 border-t border-white/[0.06] bg-[#0a0a0a]">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col items-center gap-5">
         <nav class="flex flex-wrap justify-center gap-2">
-          <a href="about.html"    class="px-4 py-2 text-[13px] font-medium text-neutral-300 bg-white/[0.04] border border-white/10 rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">О канале</a>
-          <a href="rules.html"    class="px-4 py-2 text-[13px] font-medium text-neutral-300 bg-white/[0.04] border border-white/10 rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Правила</a>
-          <a href="faq.html"      class="px-4 py-2 text-[13px] font-medium text-neutral-300 bg-white/[0.04] border border-white/10 rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">FAQ</a>
-          <a href="partners.html" class="px-4 py-2 text-[13px] font-medium text-neutral-300 bg-white/[0.04] border border-white/10 rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Партнёры</a>
-          <a href="contacts.html" class="px-4 py-2 text-[13px] font-medium text-neutral-300 bg-white/[0.04] border border-white/10 rounded-full hover:text-amber-400 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all duration-300">Контакты</a>
+          <a href="about.html"    class="px-4 py-2 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/10 rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">О канале</a>
+          <a href="rules.html"    class="px-4 py-2 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/10 rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">Правила</a>
+          <a href="faq.html"      class="px-4 py-2 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/10 rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">FAQ</a>
+          <a href="partners.html" class="px-4 py-2 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/10 rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">Партнёры</a>
+          <a href="contacts.html" class="px-4 py-2 text-[13px] font-medium text-neutral-400 bg-white/[0.03] border border-white/10 rounded-full hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-300">Контакты</a>
         </nav>
         <p class="text-xs text-neutral-600">© <span id="year"></span> XXX_WORLD · 18+</p>
       </div>
@@ -164,4 +161,4 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-                                                                                                </html>
+                                                                                                                                                                                                                                                                </html>
